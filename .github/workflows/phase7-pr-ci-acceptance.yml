@@ -1,0 +1,19 @@
+name: Phase 7 PR CI Acceptance
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [bridge-phase7-ci-acceptance-20261014]
+
+permissions:
+  contents: read
+
+jobs:
+  phase7-check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Intentional first-run failure
+        run: |
+          echo "Phase 7 GitHub CI acceptance: EXPECTED FAILURE (first revision)"
+          exit 1
