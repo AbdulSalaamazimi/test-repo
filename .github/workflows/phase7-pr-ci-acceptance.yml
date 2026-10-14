@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
-      - name: Intentional first-run failure
+      - name: Passing revised CI check
         run: |
-          echo "Phase 7 GitHub CI acceptance: EXPECTED FAILURE (first revision)"
-          exit 1
+          echo "Phase 7 GitHub CI acceptance: PASS (revised PR head)"
+          exit 0
